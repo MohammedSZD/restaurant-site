@@ -1,287 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Lover</title>
-    <!-- Style Link -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- Fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-</head>
-<body> 
-    <!-- header start-->
-    <header>
-        <div id="navbar">
-            <img src="./img/logo.png" alt="Food Lover Logo">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="content">
-            <h1>Welcome To <span class="primary-text"> Food Lover </span> Restaurant</h1>
-            <p>Here you can find Most delicacies food in the world</p>
-            <a href="#contact" class="btn btn-primary">Book a Table</a>
-        </div>
-    </header>
-     <!-- header start-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Lover | Restaurant Website Concept</title>
+  <meta name="description" content="Food Lover is a demo restaurant website concept featuring a seasonal-style menu, special offers, a food gallery and a reservation request form.">
+  <meta name="theme-color" content="#17110d">
 
-     <main>
-    <!-- About start -->
-        <section id="about">
-            <div class="container">
-                <div class="title">
-                    <h2>The Food Lover history</h2>
-                    <P>More than 25+ years of experience</P>
-                </div>
-                <div class="about-content">
-                    <div>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, quibusdam saepe natus
-                        numquam dolorum aliquam ducimus molestias tenetur? Quaerat, atque blanditiis. Debitis
-                        voluptatem
-                        sequi quibusdam nihil eveniet obcaecati soluta rem.
-                    </P>
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt aspernatur earum
-                        sequi
-                        consequatur, quasi iste quod nam esse adipisci neque commodi voluptate deserunt architecto
-                        rerum. Blanditiis labore sed sapiente.
-                    </P>
-                    <a href="#" class="btn btn-secondary">LEARN MORE</a>
-                </div>
-                <img src="./img/about_img.png" alt="Pizza">
-                </div>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Food Lover | Restaurant Website Concept">
+  <meta property="og:description" content="A responsive demo restaurant website with a filterable menu, special offers, gallery and reservation form.">
+  <meta property="og:url" content="https://mohammedszd.github.io/restaurant-site/">
+  <meta property="og:image" content="https://mohammedszd.github.io/restaurant-site/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Food Lover, back to top">
+        <img src="assets/img/logo.webp" alt="" width="44" height="36">
+        <span>Food Lover</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#offers">Special Offers</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="#reserve">Reserve a table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <picture class="hero-media">
+        <source media="(max-width: 700px)" srcset="assets/img/hero-sm.webp" width="900" height="1000">
+        <img src="assets/img/hero.webp" alt="A freshly baked pizza on a wooden board with herbs and cherry tomatoes" width="1800" height="1100" fetchpriority="high">
+      </picture>
+      <div class="container hero-inner">
+        <p class="eyebrow">Restaurant website concept</p>
+        <h1 id="hero-title">Good food, <em>made for sharing.</em></h1>
+        <p class="hero-lead">Wood-fired favourites, fresh bowls and slow breakfasts, served from morning until late.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#reserve">Reserve a table</a>
+          <a class="btn btn-ghost" href="#menu">View the menu</a>
+        </div>
+        <p class="hero-note">Open daily &middot; Weekdays 8:00 am to 11:00 pm</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about-media reveal">
+          <img src="assets/img/about.webp" alt="A chef in a striped apron plating a dish in the kitchen" width="1000" height="1250" loading="lazy">
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow eyebrow-dark">About us</p>
+          <h2 id="about-title">A table for every kind of appetite</h2>
+          <p>Food Lover is built around a simple idea: good ingredients, cooked with care and served generously. From a lazy weekend brunch to a late dinner with friends, the menu is designed to be shared.</p>
+          <p>Our kitchen keeps things honest. Dishes are cooked to order, flavours are balanced rather than loud, and there is always something for vegetarians and meat lovers alike.</p>
+          <ul class="about-points">
+            <li><strong>Cooked to order</strong><span>Every plate leaves the pass fresh.</span></li>
+            <li><strong>Made to share</strong><span>Big portions and easy-going service.</span></li>
+            <li><strong>Open late</strong><span>Breakfast through to after-dinner dessert.</span></li>
+          </ul>
+          <a class="btn btn-dark" href="#menu">Explore the menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section section-alt" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Our menu</p>
+          <h2 id="menu-title">Fresh plates, all day</h2>
+          <p>A taste of what the kitchen does best. Prices are placeholders for this demo.</p>
+        </header>
+
+        <div class="menu-filters reveal" role="group" aria-label="Filter menu by category">
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="breakfast" aria-pressed="false">Breakfast</button>
+          <button type="button" class="chip" data-filter="mains" aria-pressed="false">Mains</button>
+          <button type="button" class="chip" data-filter="bowls" aria-pressed="false">Bowls &amp; Salads</button>
+        </div>
+
+        <ul class="menu-grid" id="menu-grid">
+          <li class="menu-card reveal" data-category="breakfast">
+            <img src="assets/img/pancakes.webp" alt="A tall stack of pancakes with syrup being poured over the top" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Buttermilk Pancakes <span class="price">$9</span></h3>
+              <p>Fluffy stack with maple syrup and fresh herbs.</p>
             </div>
-        </section>
-         <!-- About end -->
-         <!-- Offers Section Start -->
-        <section id="offers">
-            <div class="container">
-                <div class="title">
-                    <h2>Our Special Offers</h2>
-                    <p>More than 25+ years of experience</p>
-                </div>
-                <div class="offers-items">
-                    <div>
-                        <img src="./img/offer1.png" alt="Quattro Pasta">
-                        <div>
-                            <h3>Quattro Pasta</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.</p>
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="./img/offer2.png" alt="Vegertarian Pasta">
-                        <div>
-                            <h3>Vegertarian Pasta</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.</p>
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="./img/offer3.png" alt="Quattro Pasta">
-                        <div>
-                            <h3>Gluten-Free Pasta</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quibusdam.</p>
-                            <p><del>$ 55.00</del> <span class="primary-text">$18.00</span></p>
-                        </div>
-                    </div>
-                </div>
+          </li>
+          <li class="menu-card reveal" data-category="breakfast">
+            <img src="assets/img/french-toast.webp" alt="French toast layered with blueberries and banana slices" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Berry French Toast <span class="price">$11</span></h3>
+              <p>Golden brioche, blueberries, banana and icing sugar.</p>
             </div>
-        </section>
-        <!-- Offers Section End -->
-        <!-- Menu Section Start -->
-        <section id="menu">
-            <div class="container">
-                <div class="title">
-                    <h2>Our Special Menu</h2>
-                    <p>Order two and get third for free</p>
-                </div>
-                <div class="menu-items">
-                    <div class="menu-items-left">
-                        <div class="menu-item">
-                            <img src="./img/food1.png" alt="LASAL Cheese">
-                            <div>
-                                <h3>LASAL CHEESE <span class="primary-text">$18.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food2.png" alt="JUMBO CRAB SHRIMP">
-                            <div>
-                                <h3>JUMBO CRAB SHRIMP <span class="primary-text">$24.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food3.png" alt="KOKTAIL JUCIE">
-                            <div>
-                                <h3>KOKTAIL JUCIE <span class="primary-text">$12.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food4.png" alt="CAPO STEAK">
-                            <div>
-                                <h3>CAPO STEAK <span class="primary-text">$60.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food5.png" alt="ORGANIC FRUIT SALAD">
-                            <div>
-                                <h3>ORGANIC FRUIT SALAD <span class="primary-text">$8.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food6.png" alt="CHEESE PIZZA">
-                            <div>
-                                <h3>CHEESE PIZZA <span class="primary-text">$18.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-items-right">
-                        <div class="menu-item">
-                            <img src="./img/food7.jpeg" alt="KOFTA MEAT">
-                            <div>
-                                <h3>KOFTA MEAT <span class="primary-text">$40.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food8.jpeg" alt="SPANISH PIES">
-                            <div>
-                                <h3>SPANISH PIES <span class="primary-text">$14.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food9.jpeg" alt="CHEESE TOST">
-                            <div>
-                                <h3>CHEESE TOST <span class="primary-text">$6.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food10.jpeg" alt="FRUIT SALAD">
-                            <div>
-                                <h3>FRUIT SALAD <span class="primary-text">$14.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food11.jpeg" alt="CHICKEN SHAWARMA">
-                            <div>
-                                <h3>CHICKEN SHAWARMA <span class="primary-text">$20.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img src="./img/food12.jpeg" alt="MEGA CHEESE PIZZA">
-                            <div>
-                                <h3>MEGA CHEESE PIZZA <span class="primary-text">$30.00</span></h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, explicabo.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-third"><a href="#">EXPLORE FULL MENU</a></button>
+          </li>
+          <li class="menu-card reveal" data-category="breakfast">
+            <img src="assets/img/avocado-toast.webp" alt="Toast topped with avocado and halved boiled eggs on a dark plate" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Avocado &amp; Egg Toast <span class="price">$10</span></h3>
+              <p>Smashed avocado, boiled egg and sea salt on toasted bread.</p>
             </div>
-        </section>
-        <!-- Menu Section end -->
-        <!-- Daytime section start-->
-        <section id="daytime">
-            <div class="container">
-                <div class="daytime-items">
-                    <div class="daytime-item">
-                        <img src="./img/breckfastIcon.png" alt="Breakfast">
-                        <h3>Breakfast</h3>
-                        <p>8:00 am to 10:00 am</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./img/lunchIcon.png" alt="Lunch">
-                        <h3>Lunch</h3>
-                        <p>4:00 pm to 7:00 pm</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./img/dinnerIcon.png" alt="Dinner">
-                        <h3>Dinner</h3>
-                        <p>9:00 pm to 1:00 Am</p>
-                    </div>
-                    <div class="daytime-item">
-                        <img src="./img/dessertIcon.png" alt="dessert">
-                        <h3>Dessert</h3>
-                        <p>All day</p>
-                    </div>
-                </div>
+          </li>
+          <li class="menu-card reveal" data-category="mains">
+            <img src="assets/img/salmon.webp" alt="Seared salmon fillet with diced vegetables and a dark sauce" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Pan-Seared Salmon <span class="price">$24</span></h3>
+              <p>Crisp-skinned salmon with a fresh vegetable salsa.</p>
             </div>
-        </section>
-        <!-- Daytime section end-->
-         <!-- Gallery Section Start -->
-         <section id="gallery">
-            <div class="container">
-                <h2>Our Food Gallery</h2>
-                <div class="img-gallery">
-                    <img src="./img/gallery1.jpeg" alt="gallery1">
-                    <img src="./img/gallery2.jpeg" alt="gallery2">
-                    <img src="./img/gallery3.jpeg" alt="gallery3">
-                    <img src="./img/gallery4.jpeg" alt="gallery4">
-                    <img src="./img/gallery5.jpeg" alt="gallery5">
-                    <img src="./img/gallery6.jpeg" alt="gallery6">
-                </div>
+          </li>
+          <li class="menu-card reveal" data-category="mains">
+            <img src="assets/img/pork-chop.webp" alt="Roasted pork chop with potatoes and green beans" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Herb-Roasted Pork Chop <span class="price">$22</span></h3>
+              <p>Juicy chop with golden potatoes and greens.</p>
             </div>
-        </section>
-        <!-- Gallary Section End -->
-        <!-- Contact Section Start -->
-        <section id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div>
-                            <h3>ADDRESS</h3>
-                            <p><i class="fa-solid fa-location-dot"></i> Hosary Mosque, 6 October, Egypt</p>
-                            <p><i class="fa-solid fa-phone"></i> Phone: 123456789</p>
-                            <p><i class="fa-regular fa-envelope"></i> support@foodlover.com</p>
-                        </div>
-                        <div>
-                            <h3>WORKING HOURS</h3>
-                            <p>8:00 am to 11:00 pm on Weekdays</p>
-                            <p>11:00 am to 1:00 Am on Weekends</p>
-                        </div>
-                        <div>
-                            <h3>FOLLOW US</h3>
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <form>
-                        <input type="text" name="Name" id="name" placeholder="Full Name">
-                        <input type="email" name="email" id="email" placeholder="Email Address">
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
-                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-third">SEND MESSAGE</button>
-                    </form>
-                </div>
+          </li>
+          <li class="menu-card reveal" data-category="mains">
+            <img src="assets/img/mixed-grill.webp" alt="A grilled platter of skewered meats with roasted peppers and dips" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Mixed Grill Platter <span class="price">$32</span></h3>
+              <p>Skewers, roasted peppers and dips, made for the table.</p>
             </div>
-        </section>
-        <!-- Contact Section End -->    
-        </main>
-        <footer id="footer">
-            <p>Copyright &copy; 2023 All rights reserved | made by <b> <a href=" "
-                        target="_blank"> Mohamed S Zaineldeen</a> </b></p>
-        </footer>
+          </li>
+          <li class="menu-card reveal" data-category="mains">
+            <img src="assets/img/skillet-pizza.webp" alt="A skillet pizza with melted cheese and toppings" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Skillet Pizza <span class="price">$16</span></h3>
+              <p>Thick, cheesy and baked until bubbling.</p>
+            </div>
+          </li>
+          <li class="menu-card reveal" data-category="mains">
+            <img src="assets/img/meatballs.webp" alt="Meatballs served on a bed of leaves on a white plate" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Herb Meatballs <span class="price">$14</span></h3>
+              <p>Tender meatballs on fresh leaves, great to share.</p>
+            </div>
+          </li>
+          <li class="menu-card reveal" data-category="bowls">
+            <img src="assets/img/harvest-bowl.webp" alt="A colourful bowl with avocado, chickpeas, tomatoes, radish and red cabbage" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Harvest Bowl <span class="price">$13</span></h3>
+              <p>Avocado, chickpeas, sweet potato and crisp vegetables.</p>
+            </div>
+          </li>
+          <li class="menu-card reveal" data-category="bowls">
+            <img src="assets/img/power-bowl.webp" alt="A bowl of salmon, egg, corn and fresh vegetables seen from above" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Power Bowl <span class="price">$15</span></h3>
+              <p>Salmon, egg, corn and a rainbow of fresh vegetables.</p>
+            </div>
+          </li>
+          <li class="menu-card reveal" data-category="bowls">
+            <img src="assets/img/kale-salad.webp" alt="A dark bowl of leafy salad with a glass of orange juice behind it" width="480" height="480" loading="lazy">
+            <div class="menu-card-body">
+              <h3>Citrus Leaf Salad <span class="price">$11</span></h3>
+              <p>Crisp leaves, shaved vegetables and a bright dressing.</p>
+            </div>
+          </li>
+        </ul>
+        <p class="note">Demo menu. Dishes and prices are fictional.</p>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="section section-dark" id="offers" aria-labelledby="offers-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Special offers</p>
+          <h2 id="offers-title">Pasta favourites, for less</h2>
+          <p>Three house pastas at a special demo price.</p>
+        </header>
+
+        <ul class="offers-grid">
+          <li class="offer-card reveal">
+            <span class="badge">Demo offer</span>
+            <img src="assets/img/offer1.webp" alt="Penne pasta with tomato sauce and fresh parsley on a white plate" width="260" height="260" loading="lazy">
+            <h3>Penne Pomodoro</h3>
+            <p>Penne in a slow tomato sauce with fresh parsley.</p>
+            <p class="offer-price"><del><span class="visually-hidden">Was </span>$20</del> <strong><span class="visually-hidden">Now </span>$14</strong></p>
+          </li>
+          <li class="offer-card reveal">
+            <span class="badge">Demo offer</span>
+            <img src="assets/img/offer2.webp" alt="Vegetable pasta salad with broccoli, olives, tomato and feta" width="260" height="260" loading="lazy">
+            <h3>Garden Fusilli</h3>
+            <p>Vegetarian fusilli with broccoli, olives, tomato and feta.</p>
+            <p class="offer-price"><del><span class="visually-hidden">Was </span>$20</del> <strong><span class="visually-hidden">Now </span>$14</strong></p>
+          </li>
+          <li class="offer-card reveal">
+            <span class="badge">Demo offer</span>
+            <img src="assets/img/offer3.webp" alt="Spaghetti with tomato sauce, basil and cubes of feta on a white plate" width="260" height="260" loading="lazy">
+            <h3>Spaghetti Basilico</h3>
+            <p>Spaghetti with tomato, fresh basil and crumbled feta.</p>
+            <p class="offer-price"><del><span class="visually-hidden">Was </span>$20</del> <strong><span class="visually-hidden">Now </span>$14</strong></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Gallery</p>
+          <h2 id="gallery-title">A look at the table</h2>
+          <p>Select a photo to view it larger.</p>
+        </header>
+
+        <ul class="gallery-grid">
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-grill.webp" data-alt="Grilled skewers, roasted peppers and dips on a tray"><img src="assets/img/mixed-grill.webp" alt="Grilled skewers, roasted peppers and dips on a tray" width="480" height="480" loading="lazy"></button></li>
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-bowl.webp" data-alt="A colourful harvest bowl with avocado and chickpeas"><img src="assets/img/harvest-bowl.webp" alt="A colourful harvest bowl with avocado and chickpeas" width="480" height="480" loading="lazy"></button></li>
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-salad.webp" data-alt="A dark bowl of leafy salad next to a glass of orange juice"><img src="assets/img/kale-salad.webp" alt="A dark bowl of leafy salad next to a glass of orange juice" width="480" height="480" loading="lazy"></button></li>
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-toast.webp" data-alt="Avocado and egg toast on a dark plate"><img src="assets/img/avocado-toast.webp" alt="Avocado and egg toast on a dark plate" width="480" height="480" loading="lazy"></button></li>
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-power.webp" data-alt="A power bowl with salmon, egg and vegetables"><img src="assets/img/power-bowl.webp" alt="A power bowl with salmon, egg and vegetables" width="480" height="480" loading="lazy"></button></li>
+          <li class="reveal"><button type="button" class="gallery-item" data-full="assets/img/g-meatballs.webp" data-alt="Meatballs on fresh leaves with a fork"><img src="assets/img/meatballs.webp" alt="Meatballs on fresh leaves with a fork" width="480" height="480" loading="lazy"></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark">Visit us</p>
+          <h2 id="contact-title">Contact &amp; reservations</h2>
+          <p>All details below are fictional placeholders for this demo.</p>
+        </header>
+
+        <div class="contact-layout">
+          <div class="contact-info reveal">
+            <ul class="info-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div><h3>Address</h3><p>12 Example Street<br>6th of October City, Egypt</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                <div><h3>Phone</h3><p>+20 000 000 0000</p></div>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <div><h3>Email</h3><p>hello@example.com</p></div>
+              </li>
+            </ul>
+
+            <div class="hours">
+              <h3><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Opening hours</h3>
+              <dl>
+                <div><dt>Monday to Friday</dt><dd>8:00 am &ndash; 11:00 pm</dd></div>
+                <div><dt>Saturday &amp; Sunday</dt><dd>11:00 am &ndash; 1:00 am</dd></div>
+              </dl>
+              <dl class="service-times">
+                <div><dt>Breakfast</dt><dd>8:00 &ndash; 11:00 am (weekdays)</dd></div>
+                <div><dt>Lunch</dt><dd>12:00 &ndash; 4:00 pm</dd></div>
+                <div><dt>Dinner</dt><dd>6:00 pm until close</dd></div>
+                <div><dt>Dessert</dt><dd>All day</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <form class="reserve-form reveal" id="reserve" novalidate aria-labelledby="reserve-title">
+            <h3 id="reserve-title">Request a table <span class="badge badge-inline">Demo form</span></h3>
+            <p class="form-intro">This form is for demonstration only. Nothing is sent or stored, and no booking is made.</p>
+
+            <div class="field">
+              <label for="r-name">Full name</label>
+              <input id="r-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="r-email">Email</label>
+              <input id="r-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="r-date">Date</label>
+                <input id="r-date" name="date" type="date" required>
+              </div>
+              <div class="field">
+                <label for="r-time">Time</label>
+                <input id="r-time" name="time" type="time" required>
+              </div>
+              <div class="field">
+                <label for="r-guests">Guests</label>
+                <select id="r-guests" name="guests" required>
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8+</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="r-notes">Notes <span class="optional">(optional)</span></label>
+              <textarea id="r-notes" name="notes" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Preview request</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#home" aria-label="Food Lover, back to top">
+        <img src="assets/img/logo.webp" alt="" width="44" height="36" loading="lazy">
+        <span>Food Lover</span>
+      </a>
+      <p>Food Lover is a fictional restaurant created as a website design concept. Menu items, prices and contact details are for demonstration only.</p>
+      <p class="credit">&copy; 2026 &middot; Design and development by <a href="https://github.com/MohammedSZD" target="_blank" rel="noopener">Mohamed S Zaineldeen</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <figure>
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-close" aria-label="Close image viewer"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button type="button" class="lb-btn lb-prev" aria-label="Previous image"><svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg></button>
+    <button type="button" class="lb-btn lb-next" aria-label="Next image"><svg class="icon" aria-hidden="true"><use href="#i-next"/></svg></button>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
+</html>
